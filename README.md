@@ -1,4 +1,4 @@
-# Ubuntu Remaster
+# Sea Machines Robotics Ubuntu Remaster
 
 ## Usage
 `sudo ./make-iso.sh [-r] [-s]`
