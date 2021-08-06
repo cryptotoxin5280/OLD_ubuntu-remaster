@@ -6,7 +6,7 @@ STAGE_DIR=stage
 ISO_FILE=iso/smr-ubuntu-$RELEASE.iso
 
 # 1. Download ISO
-#wget -O /tmp/ubuntu.iso https://cdimage.ubuntu.com/releases/18.04.5/release/ubuntu-18.04.5-server-amd64.iso
+wget -O /tmp/ubuntu.iso https://cdimage.ubuntu.com/releases/18.04.5/release/ubuntu-18.04.5-server-amd64.iso
 
 # 2. Mount ISO
 mkdir -p /mnt/iso
@@ -20,16 +20,16 @@ cp -rT /mnt/iso stage
 sudo umount /mnt/iso
 
 # 5. Overwrite the UEFI boot loader file in the ISO staging directory
-cp boot/grub.cfg $STAGE/boot/grub/.
+cp boot/grub.cfg $STAGE_DIR/boot/grub/.
 
 # 6. Overwrite the legacy boot loader file in the ISO staging directory
-cp boot/txt.cfg $STAGE/isolinux/.
+cp boot/txt.cfg $STAGE_DIR/isolinux/.
 
 # 7. Copy the preseed files into the ISO staging directory
-cp -rf smr-preseed $STAGE/.
+cp -rf smr-preseed $STAGE_DIR/.
 
 # 8. Copy software packages into the ISO staging directory
-cp -rf smr-software $STAGE/.
+cp -rf smr-software $STAGE_DIR/.
 
 # 9. Create the new ISO
 mkdir iso
