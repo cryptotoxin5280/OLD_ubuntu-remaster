@@ -1,4 +1,4 @@
-# Sea Machines Robotics Ubuntu ISO Remastering Tool
+# Ubuntu ISO Remastering Tool
 This tool generates a 'remastered' version of the Ubuntu ISO installation media that performs a completely automated install of the Ubuntu OS and any additional specified softare.
 
 ## What the tool does under the hood...
